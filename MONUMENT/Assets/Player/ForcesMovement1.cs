@@ -16,6 +16,8 @@ namespace MONUMENT
         [SerializeField] private float movementAcceleration = 0f;
         [SerializeField] private float ungroundedAccelerationMultiplier = 0f;
 
+        [SerializeField] private float jumpSpeed = 0f;
+
         [Header("Grounded Settings")]
         [SerializeField] private LayerMask groundMask = 0;
         private bool grounded;
@@ -28,29 +30,29 @@ namespace MONUMENT
         private void Start()
         {
             //Time.fixedDeltaTime = 1f / 600f;
+            Application.targetFrameRate = 300;
             rb.sleepThreshold = 0f;
         }
 
         private void Update()
         {
-
             if (Input.GetKeyDown(KeyCode.Space) && grounded) { Jump(); }
         }
 
         private void Jump()
         {
-            Vector3 vec = (Vector3.up * 5f);
+            /*Vector3 vec = Vector3.up * jumpSpeed;
             
-            if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; } 
+            if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; } */
              
-            rb.AddForce(vec, ForceMode.VelocityChange);
+            rb.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
         }
 
         private void FixedUpdate()
         {
-            CheckGrounded();
-
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
+
+            CheckGrounded();
 
             handler.Refresh(eyes.position, rb.velocity, Time.time);
 
@@ -59,7 +61,7 @@ namespace MONUMENT
             Vector3 movement = (transform.right * Input.GetAxisRaw("Horizontal")) + (transform.forward * Input.GetAxisRaw("Vertical"));
             movement.Normalize();
 
-            rb.AddForce(Physics.gravity, ForceMode.Acceleration);
+            //rb.AddForce(Physics.gravity, ForceMode.Acceleration);
 
             Vector3 velocity = rb.velocity;
             velocity.y = 0f;

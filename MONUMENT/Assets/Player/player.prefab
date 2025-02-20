@@ -206,11 +206,12 @@ MonoBehaviour:
   rb: {fileID: 6723172472626007673}
   eyes: {fileID: 4353114958330189048}
   handler: {fileID: 0}
-  movementCutoffVelocityMagnitude: 5.5
-  maxGroundedVelocity: 12.5
+  movementCutoffVelocityMagnitude: 5
+  maxGroundedVelocity: 5
   maxUngroundedVelocity: 25
   movementAcceleration: 25
-  ungroundedAccelerationMultiplier: 0.4
+  ungroundedAccelerationMultiplier: 0.35
+  jumpSpeed: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 1537
