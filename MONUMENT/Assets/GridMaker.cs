@@ -12,9 +12,9 @@ namespace MONUMENT
 
         private void Start()
         {
-            //float x = (width + spacing) * cubeCountSides
-            
-            transform.position = new Vector3(cubeCountSides * (spacing) * -0.5f, 0f, cubeCountSides * (spacing) * -0.5f);
+            float xPlace = cubeCountSides * spacing * -0.5f;
+
+            transform.position = new Vector3(xPlace, transform.position.y, xPlace);
             
             GameObject cube;
             
