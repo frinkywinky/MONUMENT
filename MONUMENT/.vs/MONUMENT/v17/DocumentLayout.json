@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\player\\forcesmovement1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\forcesmovement1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ForcesMovement1.cs",
+              "DocumentMoniker": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\Player\\ForcesMovement1.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\ForcesMovement1.cs",
+              "ToolTip": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\Player\\ForcesMovement1.cs",
+              "RelativeToolTip": "Assets\\Player\\ForcesMovement1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:56:36.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

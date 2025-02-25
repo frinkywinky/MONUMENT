@@ -374,6 +374,14 @@ PrefabInstance:
       propertyPath: handler
       value: 
       objectReference: {fileID: 320804509}
+    - target: {fileID: 6723172473136790677, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
+      propertyPath: movementCutoffVelocityMagnitude
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723172473136790677, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
+      propertyPath: maxGroundedVelocity
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
 --- !u!4 &1174472999 stripped
@@ -432,7 +440,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8048d6aabbf7e1d429eb11a83e67b05c, type: 2}
+  - {fileID: 2100000, guid: 45e9713dcf9c4da498ae56d8ed6564b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,7 +479,7 @@ Transform:
   m_GameObject: {fileID: 1931147993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1000, y: 1, z: 1000}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -492,7 +500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1932951115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standardCube: {fileID: 528343979218883283, guid: 2f18e668e1c050b48a10ec4acfee671d, type: 3}
-  height: 2000
+  height: 1000
   width: 10
   spacing: 20
   cubeCountSides: 100
