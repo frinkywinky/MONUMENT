@@ -2,12 +2,19 @@
 
 namespace MONUMENT
 {
+    /// <summary>
+    /// Project add pixelated look with rendertextur.
+    /// 
+    /// Gotta try unity unit tests !! poggg
+    /// </summary>
     public class ForcesMovement1 : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private Rigidbody rb = null;
         [SerializeField] private Transform eyes = null;
         [SerializeField] private CameraHandler handler = null;
+
+        [SerializeField] private MaterialColor materialColor = null;
 
         [Header("Movement Settings")]
         [SerializeField] private float movementCutoffVelocityMagnitude = 0f;
@@ -20,12 +27,11 @@ namespace MONUMENT
 
         [Header("Grounded Settings")]
         [SerializeField] private LayerMask groundMask = 0;
-        private bool grounded;
-        //[SerializeField] private float groundedRayLength = 0f;
-
         [SerializeField] private float groundColliderRadius = 0f;
         [SerializeField] private float groundColliderDownward = 0f;
         [SerializeField] private float maxGroundedAngle = 0f;
+
+        private bool grounded;
 
         private void Start()
         {
@@ -46,13 +52,15 @@ namespace MONUMENT
             if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; } */
              
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
+             
+            materialColor.value = 1f - materialColor.value;
         }
 
         private void FixedUpdate()
         {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
-
             CheckGrounded();
+
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
 
             handler.Refresh(eyes.position, rb.velocity, Time.time);
 
@@ -61,12 +69,12 @@ namespace MONUMENT
             Vector3 movement = (transform.right * Input.GetAxisRaw("Horizontal")) + (transform.forward * Input.GetAxisRaw("Vertical"));
             movement.Normalize();
 
-            //rb.AddForce(Physics.gravity, ForceMode.Acceleration);
-
             Vector3 velocity = rb.velocity;
             velocity.y = 0f;
 
             float mag = velocity.magnitude;
+
+            materialColor.value = mag / maxGroundedVelocity;
 
             if (mag < movementCutoffVelocityMagnitude)
             {
