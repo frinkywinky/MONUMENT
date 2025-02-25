@@ -1,13 +1,7 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MONUMENT
 {
-    /// <summary>
-    /// Project add pixelated look with rendertextur.
-    /// 
-    /// Gotta try unity unit tests !! poggg
-    /// </summary>
     public class ForcesMovement1 : MonoBehaviour
     {
         [Header("References")]
@@ -27,21 +21,17 @@ namespace MONUMENT
         [Header("Grounded Settings")]
         [SerializeField] private LayerMask groundMask = 0;
         private bool grounded;
+        //[SerializeField] private float groundedRayLength = 0f;
 
         [SerializeField] private float groundColliderRadius = 0f;
         [SerializeField] private float groundColliderDownward = 0f;
         [SerializeField] private float maxGroundedAngle = 0f;
 
-        float testVert;
-        float testHori;
-        bool testing;
-
         private void Start()
         {
+            //Time.fixedDeltaTime = 1f / 600f;
             Application.targetFrameRate = 300;
             rb.sleepThreshold = 0f;
-
-            StartCoroutine(TestMovementCoroutine());
         }
 
         private void Update()
@@ -49,56 +39,29 @@ namespace MONUMENT
             if (Input.GetKeyDown(KeyCode.Space) && grounded) { Jump(); }
         }
 
-        private void FixedUpdate()
-        {
-            if (!testing)
-            {
-                Move(Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"));
-            }
-            else
-            {
-                Move(testVert, testHori);
-            }
-        }
-
-        private IEnumerator TestMovementCoroutine() 
-        {
-            testHori = 1f;
-            testVert = 1f;
-            testing = true;
-
-            yield return new WaitForSeconds(3f);
-
-            testHori = 0f;
-            testVert = 0f;
-
-            yield return new WaitForSeconds(1f);
-
-            testing = false;
-        }
-
         private void Jump()
         {
+            /*Vector3 vec = Vector3.up * jumpSpeed;
+            
+            if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; } */
+             
             rb.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
         }
 
-        private void Move(float vert, float hori)
+        private void FixedUpdate()
         {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
+
             CheckGrounded();
 
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
-            
             handler.Refresh(eyes.position, rb.velocity, Time.time);
 
             float acceleration = grounded ? movementAcceleration : movementAcceleration * ungroundedAccelerationMultiplier;
 
-            float accel = movementAcceleration;
-
-            if (grounded)
-                accel *= ungroundedAccelerationMultiplier;
-
-            Vector3 movement = (transform.right * hori) + (transform.forward * vert);
+            Vector3 movement = (transform.right * Input.GetAxisRaw("Horizontal")) + (transform.forward * Input.GetAxisRaw("Vertical"));
             movement.Normalize();
+
+            //rb.AddForce(Physics.gravity, ForceMode.Acceleration);
 
             Vector3 velocity = rb.velocity;
             velocity.y = 0f;
@@ -115,6 +78,8 @@ namespace MONUMENT
             }
 
             Vector3 counterMovement = acceleration * Time.fixedDeltaTime * ungroundedAccelerationMultiplier * -(velocity.normalized - movement);
+
+            if (mag != 0f && counterMovement.magnitude > mag) { counterMovement = -velocity;  }
 
             rb.AddForce(counterMovement, ForceMode.VelocityChange);
         }
