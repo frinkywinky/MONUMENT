@@ -4,7 +4,7 @@ namespace MONUMENT
 {
     public class Tower : MonoBehaviour
     {
-        private const float SPEED = 6f;
+        private const float SPEED = 12f;
         private Vector3 velocity;
         private bool switching = false;
 
@@ -25,7 +25,7 @@ namespace MONUMENT
             {
                 switching = true;
                 
-                Invoke(nameof(Invert), 1f);
+                Invoke(nameof(Switch), 1f);
             }
             else if (transform.position.y > 0f)
             {
@@ -33,9 +33,9 @@ namespace MONUMENT
             }
         }
 
-        private void Invert() 
+        private void Switch() 
         {
-            velocity *= -1f;
+            velocity *= -0.5f;
 
             switching = false;
         }
