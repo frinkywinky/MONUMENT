@@ -47,13 +47,13 @@ namespace MONUMENT
 
         private void Jump()
         {
-            /*Vector3 vec = Vector3.up * jumpSpeed;
-            
-            if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; } */
+            Vector3 vec = Vector3.up * jumpSpeed;
+
+            if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; }
+
+            rb.AddForce(vec, ForceMode.VelocityChange);
              
-            rb.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
-             
-            materialColor.value = 1f - materialColor.value;
+            //materialColor.value = 1f - materialColor.value;
         }
 
         private void FixedUpdate()
@@ -70,11 +70,12 @@ namespace MONUMENT
             movement.Normalize();
 
             Vector3 velocity = rb.velocity;
+
+            materialColor.value = velocity.magnitude / maxGroundedVelocity;
+
             velocity.y = 0f;
 
             float mag = velocity.magnitude;
-
-            materialColor.value = mag / maxGroundedVelocity;
 
             if (mag < movementCutoffVelocityMagnitude)
             {

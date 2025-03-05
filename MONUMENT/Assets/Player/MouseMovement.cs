@@ -9,7 +9,7 @@ namespace MONUMENT
         private const float MIN_CAM_ANGLE = -90f;
         private const float MAX_CAM_ANGLE = 90f;
         [SerializeField] private Transform cam = null;
-
+        [SerializeField] private Transform UI = default;
         [SerializeField] private float sensitvity = 0.33f;
         private Vector2 mouseDirection;
         private float mouseX;
@@ -30,6 +30,8 @@ namespace MONUMENT
              
             mouseX = Input.GetAxisRaw("Mouse X");
             mouseY = Input.GetAxisRaw("Mouse Y");
+
+            UI.Rotate(Vector3.forward * mouseX);
 
             Vector2 mouseDirectionChange = new Vector2(mouseX, mouseY);
 

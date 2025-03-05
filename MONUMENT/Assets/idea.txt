@@ -1,2 +1,6 @@
 attach concrete mat to script and then control it based on fricking actions.
 or like blend between two materials.
+
+add brackeys concrete texture.
+
+also plan andrea playtest in.

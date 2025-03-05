@@ -13,7 +13,7 @@ namespace MONUMENT
 
         private void FixedUpdate()
         {
-            transform.Translate(dir * 5f * Time.fixedDeltaTime * Vector3.up);
+            transform.Translate(dir * 6f * Time.fixedDeltaTime * Vector3.up);
 
             if (transform.position.y <= -250f) 
             {
