@@ -4,27 +4,40 @@ namespace MONUMENT
 {
     public class Tower : MonoBehaviour
     {
-        private float dir = -1f;
-        
+        private const float SPEED = 6f;
+        private Vector3 velocity;
+        private bool switching = false;
+
         private void Start()
         {
             gameObject.isStatic = false;
+
+            velocity = Vector3.down * SPEED;
         }
 
         private void FixedUpdate()
         {
-            transform.Translate(dir * 6f * Time.fixedDeltaTime * Vector3.up);
+            if (switching) { return; }
+            
+            transform.Translate(velocity * Time.fixedDeltaTime);
 
-            if (transform.position.y <= -250f) 
+            if (transform.position.y < -transform.localScale.y * 0.5f) 
             {
-                dir = 1f;
+                switching = true;
                 
-                //Destroy(gameObject);
+                Invoke(nameof(Invert), 1f);
             }
-            else if (transform.position.y > 10f) 
+            else if (transform.position.y > 0f)
             {
-                dir = -1f;
+                Destroy(this);
             }
+        }
+
+        private void Invert() 
+        {
+            velocity *= -1f;
+
+            switching = false;
         }
     }
 }

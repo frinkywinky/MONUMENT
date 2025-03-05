@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 1174472999}
     - target: {fileID: 7448879446904749918, guid: 6d0cfaa92fe6d1c428c2c2c42d60eb3b, type: 3}
       propertyPath: m_Name
-      value: camera
+      value: eyes_cam
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d0cfaa92fe6d1c428c2c2c42d60eb3b, type: 3}
@@ -583,7 +583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1280594987
 RectTransform:
   m_ObjectHideFlags: 0
