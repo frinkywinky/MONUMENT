@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\assets\\idea.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\idea.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\player\\mousemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\mousemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\assets\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\idea.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\idea.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\assets\\player\\forcesmovement1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\player\\forcesmovement1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\forcesmovement1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\assets\\materialcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|c:\\users\\dan-mechanics\\development\\github\\monument\\monument\\assets\\materialcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A594A36E-C135-5087-0B0A-D91D7B29E9E0}|Assembly-CSharp.csproj|solutionrelative:assets\\materialcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,30 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MouseMovement.cs",
               "DocumentMoniker": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\Player\\MouseMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\MouseMovement.cs",
               "ToolTip": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\Player\\MouseMovement.cs",
               "RelativeToolTip": "Assets\\Player\\MouseMovement.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T11:20:59.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "idea.txt",
               "DocumentMoniker": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\idea.txt",
               "RelativeDocumentMoniker": "Assets\\idea.txt",
               "ToolTip": "C:\\Users\\Dan-Mechanics\\Development\\GITHUB\\MONUMENT\\MONUMENT\\Assets\\idea.txt",
               "RelativeToolTip": "Assets\\idea.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-03-05T11:12:44.861Z",
               "EditorCaption": ""
@@ -68,7 +68,8 @@
               "RelativeToolTip": "Assets\\Tower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:44:14.369Z"
+              "WhenOpened": "2025-03-05T10:44:14.369Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -80,7 +81,8 @@
               "RelativeToolTip": "Assets\\MaterialColor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:41:42.509Z"
+              "WhenOpened": "2025-03-05T10:41:42.509Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -92,7 +94,8 @@
               "RelativeToolTip": "Assets\\Player\\ForcesMovement1.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAtwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:56:36.259Z"
+              "WhenOpened": "2025-02-25T15:56:36.259Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -4,3 +4,9 @@ or like blend between two materials.
 add brackeys concrete texture.
 
 also plan andrea playtest in.
+
+we need to implement better tower system
+en add the shadow figure and fix the jumping between the yeets.
+perhaps we need to add an interaction.
+
+and also fix the concrete texture a little.
