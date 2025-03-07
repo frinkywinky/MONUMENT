@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 4353114958330189048}
-  UI: {fileID: 0}
   sensitvity: 0.33
 --- !u!114 &6723172473136790677
 MonoBehaviour:
@@ -214,13 +213,13 @@ MonoBehaviour:
   maxUngroundedVelocity: 50
   movementAcceleration: 25
   ungroundedAccelerationMultiplier: 0.35
-  jumpSpeed: 12
+  jumpSpeed: 10
   groundMask:
     serializedVersion: 2
     m_Bits: 1537
-  groundColliderRadius: 0.6
-  groundColliderDownward: 0.65
-  maxGroundedAngle: 42.5
+  groundColliderRadius: 0.5
+  groundColliderDownward: 0.55
+  maxGroundedAngle: 44.5
 --- !u!114 &382942214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,3 +232,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eb0cf58d6958d4387198392a032a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerSpeed: 12
+  waitPeriod: 1
