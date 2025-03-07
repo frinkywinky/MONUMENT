@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace MONUMENT
 {
+    /// <summary>
+    /// This now shows the past, how the heck am i gonna make the future? maybe ask lucas or bram ???
+    /// </summary>
     public class ShadowObject : MonoBehaviour
     {
         public Queue<Frame> frames = new Queue<Frame>();
