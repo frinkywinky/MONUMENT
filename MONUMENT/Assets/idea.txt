@@ -10,3 +10,5 @@ en add the shadow figure and fix the jumping between the yeets.
 perhaps we need to add an interaction.
 
 and also fix the concrete texture a little.
+
+next thing to add is that the monument blocks the player and that there is a shadow figure of past player.

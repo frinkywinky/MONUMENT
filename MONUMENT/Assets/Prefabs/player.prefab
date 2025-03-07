@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353114958330189048}
   m_Layer: 0
-  m_Name: eyes
+  m_Name: player_eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 6723172472626007672}
   - component: {fileID: 2384476330907933089}
   - component: {fileID: 6723172473136790677}
+  - component: {fileID: 382942214}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -190,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 4353114958330189048}
+  UI: {fileID: 0}
   sensitvity: 0.33
 --- !u!114 &6723172473136790677
 MonoBehaviour:
@@ -206,15 +208,28 @@ MonoBehaviour:
   rb: {fileID: 6723172472626007673}
   eyes: {fileID: 4353114958330189048}
   handler: {fileID: 0}
+  materialColor: {fileID: 0}
   movementCutoffVelocityMagnitude: 5
   maxGroundedVelocity: 5
-  maxUngroundedVelocity: 25
+  maxUngroundedVelocity: 50
   movementAcceleration: 25
   ungroundedAccelerationMultiplier: 0.35
-  jumpSpeed: 5
+  jumpSpeed: 12
   groundMask:
     serializedVersion: 2
     m_Bits: 1537
-  groundColliderRadius: 0.5
+  groundColliderRadius: 0.6
   groundColliderDownward: 0.65
   maxGroundedAngle: 42.5
+--- !u!114 &382942214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723172472626007668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84eb0cf58d6958d4387198392a032a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
