@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7448879446904749912, guid: 6d0cfaa92fe6d1c428c2c2c42d60eb3b, type: 3}
       propertyPath: field of view
-      value: 80
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7448879446904749913, guid: 6d0cfaa92fe6d1c428c2c2c42d60eb3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -388,7 +388,7 @@ Camera:
   m_GameObject: {fileID: 1067032715}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -410,7 +410,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -449,15 +449,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6723172472626007675, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.605186
       objectReference: {fileID: 0}
     - target: {fileID: 6723172472626007675, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 250
+      value: 1.0000001
       objectReference: {fileID: 0}
     - target: {fileID: 6723172472626007675, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.1674346
       objectReference: {fileID: 0}
     - target: {fileID: 6723172472626007675, guid: fe348164d2b96da4f89feb3a49fbdd85, type: 3}
       propertyPath: m_LocalRotation.x
@@ -582,7 +582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236689609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 308, y: 231, z: 0}
+  m_LocalPosition: {x: 0, y: -1000, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -601,8 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 382942209}
-  frameTimeCount: 300
-  offset: {x: 0, y: 0, z: 0}
+  frameTimeCount: 350
+  offset: {x: 15, y: 0, z: 15}
 --- !u!1 &1399439758
 GameObject:
   m_ObjectHideFlags: 0
