@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353114958330189048}
   m_Layer: 0
-  m_Name: player_eyes
+  m_Name: eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,13 +207,14 @@ MonoBehaviour:
   rb: {fileID: 6723172472626007673}
   eyes: {fileID: 4353114958330189048}
   handler: {fileID: 0}
+  towerActivator: {fileID: 382942214}
   materialColor: {fileID: 0}
   movementCutoffVelocityMagnitude: 5
   maxGroundedVelocity: 5
   maxUngroundedVelocity: 50
   movementAcceleration: 25
   ungroundedAccelerationMultiplier: 0.35
-  jumpSpeed: 10
+  jumpSpeed: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 1537

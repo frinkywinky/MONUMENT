@@ -13,7 +13,7 @@ namespace MONUMENT
         [SerializeField] private Rigidbody rb = null;
         [SerializeField] private Transform eyes = null;
         [SerializeField] private CameraHandler handler = null;
-
+        [SerializeField] private TowerActivator towerActivator = null;
         [SerializeField] private MaterialColor materialColor = null;
 
         [Header("Movement Settings")]
@@ -47,12 +47,16 @@ namespace MONUMENT
 
         private void Jump()
         {
-            Vector3 vec = Vector3.up * jumpSpeed;
+            Vector3 vec = (towerActivator.Activating ? 3f : 1f) * jumpSpeed * Vector3.up;
 
             if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; }
 
             rb.AddForce(vec, ForceMode.VelocityChange);
-             
+
+            if (towerActivator.Activating) 
+            {
+                materialColor.R += 0.1f;
+            }
             //materialColor.value = 1f - materialColor.value;
         }
 

@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace MONUMENT
-{   
+{
     public class TowerActivator : MonoBehaviour
     {
+        public bool Activating => activating;
+        
         [SerializeField] private float towerSpeed = default;
         [SerializeField] private float waitPeriod = default;
+
+        private bool activating;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -17,7 +19,19 @@ namespace MONUMENT
                 {
                     collision.gameObject.AddComponent<Tower>().Setup(towerSpeed, waitPeriod);
                 }
+
+                activating = true;
             }
+        }
+
+        private void OnCollisionExit(Collision collision)
+        {
+            if (!collision.transform.CompareTag("Cube"))
+            {
+                return;
+            }
+
+            activating = false;
         }
     }
 }

@@ -4,25 +4,26 @@ namespace MONUMENT
 {
     public class GridMaker : MonoBehaviour
     {
-        [SerializeField] private GameObject standardCube = default;
+        [SerializeField] private GameObject cubePrefab = default;
+
         [SerializeField] private float height = default;
         [SerializeField] private float width = default;
         [SerializeField] private float spacing = default;
-        [SerializeField] private int cubeCountSides = default;
+        [SerializeField] private int sideCount = default;
 
         private void Start()
         {
-            float xPlace = cubeCountSides * spacing * -0.5f;
+            float totalLength = spacing * (sideCount - 1);
 
-            transform.position = new Vector3(xPlace, transform.position.y, xPlace);
+            transform.position = new Vector3(-totalLength / 2f, transform.position.y, -totalLength / 2f);
             
             GameObject cube;
             
-            for (int x = 0; x < cubeCountSides; x++)
+            for (int x = 0; x < sideCount; x++)
             {
-                for (int z = 0; z < cubeCountSides; z++)
+                for (int z = 0; z < sideCount; z++)
                 {
-                    cube = Instantiate(standardCube, new Vector3(x * spacing, 0f, z * spacing) + transform.position, Quaternion.identity);
+                    cube = Instantiate(cubePrefab, new Vector3(x * spacing, 0f, z * spacing) + transform.position, Quaternion.identity);
                     cube.transform.localScale = new Vector3(width, height, width);
                 }
             }

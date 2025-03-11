@@ -11,6 +11,7 @@ namespace MONUMENT
         private bool switching;
         private Vector3 originalPos;
         private float waitPeriod;
+        private float speed;
 
         private void FixedUpdate()
         {
@@ -33,11 +34,17 @@ namespace MONUMENT
         public void Setup(float speed, float waitPeriod) 
         {
             this.waitPeriod = waitPeriod;
-            
+            this.speed = speed;
+
             originalPos = transform.position;
 
             gameObject.isStatic = false;
 
+            Invoke(nameof(Go), waitPeriod);
+        }
+
+        private void Go() 
+        {
             velocity = Vector3.down * speed;
         }
 

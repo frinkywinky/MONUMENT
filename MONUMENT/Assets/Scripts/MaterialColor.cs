@@ -8,11 +8,17 @@ namespace MONUMENT
 
         [SerializeField] private Color sadColor = default;
         [SerializeField] private Color happyColor = default;
-        [Range(0f, 1f)] public float value = default; 
+        [Range(0f, 1f)] public float value = default;
+
+        public float R;
 
         private void FixedUpdate()
         {
-            concrete.color = Color.Lerp(sadColor, happyColor, value);
+            Color _color = Color.Lerp(sadColor, happyColor, value);
+
+            _color.r += R;
+
+            concrete.color = _color;
         }
     }
 }
