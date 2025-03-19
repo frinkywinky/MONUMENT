@@ -10,6 +10,7 @@ namespace MONUMENT
     public class ForcesMovement1 : MonoBehaviour
     {
         [Header("References")]
+
         [SerializeField] private Rigidbody rb = null;
         [SerializeField] private Transform eyes = null;
         [SerializeField] private CameraHandler handler = null;
@@ -17,6 +18,7 @@ namespace MONUMENT
         [SerializeField] private MaterialColor materialColor = null;
 
         [Header("Movement Settings")]
+
         [SerializeField] private float movementCutoffVelocityMagnitude = 0f;
         [SerializeField] private float maxGroundedVelocity = 0f;
         [SerializeField] private float maxUngroundedVelocity = 0f;
@@ -26,43 +28,50 @@ namespace MONUMENT
         [SerializeField] private float jumpSpeed = 0f;
 
         [Header("Grounded Settings")]
+
         [SerializeField] private LayerMask groundMask = 0;
+        [SerializeField] private LayerMask wallMask = 0;
         [SerializeField] private float groundColliderRadius = 0f;
         [SerializeField] private float groundColliderDownward = 0f;
         [SerializeField] private float maxGroundedAngle = 0f;
 
         private bool grounded;
 
+        private bool prevWall;
+        private bool walled;
+
         private void Start()
         {
-            //Time.fixedDeltaTime = 1f / 600f;
             Application.targetFrameRate = 300;
             rb.sleepThreshold = 0f;
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && grounded) { Jump(); }
+            if (Input.GetKeyDown(KeyCode.Space) && (grounded || walled))
+                Jump();
         }
 
         private void Jump()
         {
-            Vector3 vec = (towerActivator.Activating ? 3f : 1f) * jumpSpeed * Vector3.up;
+            Vector3 vec = jumpSpeed * Vector3.up;
 
             if (rb.velocity.y < 0f) { vec.y -= rb.velocity.y; }
 
             rb.AddForce(vec, ForceMode.VelocityChange);
-
-            if (towerActivator.Activating) 
-            {
-                materialColor.R += 0.1f;
-            }
-            //materialColor.value = 1f - materialColor.value;
         }
 
         private void FixedUpdate()
         {
             CheckGrounded();
+
+            prevWall = walled;
+            CheckWall();
+
+            if (!prevWall && walled)
+                rb.AddForce(rb.velocity.y * Vector3.down, ForceMode.VelocityChange);
+
+            rb.useGravity = !walled;
 
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, grounded ? maxGroundedVelocity : maxUngroundedVelocity);
 
@@ -112,6 +121,11 @@ namespace MONUMENT
                     grounded = true;
                 }
             }
+        }
+
+        private void CheckWall()
+        {
+            walled = Physics.OverlapSphere(transform.position, 0.51f, wallMask, QueryTriggerInteraction.Ignore).Length != 0;
         }
 
         private void OnDrawGizmos()
